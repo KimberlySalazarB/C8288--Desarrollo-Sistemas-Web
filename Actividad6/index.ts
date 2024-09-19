@@ -12,7 +12,7 @@ server.get("/hello", function (_req: Request, res: Response): void {
 server.get(
     "/api/names",
     async function (_req: Request, res: Response): Promise<void> {
-        let response: string;
+        let response: string | ErrorResponse;
         try {
             response = await routeAPINames();
             res.send(response);

@@ -15,10 +15,13 @@ const routeAPINames = () => __awaiter(void 0, void 0, void 0, function* () {
     let data;
     try {
         const response = yield fetch(url);
+        if (!response.ok) {
+            return "Error al hacer la peticion";
+        }
         data = (yield response.json()); //declara explicitamente que el valor va ser de tipo responseType
     }
     catch (err) {
-        return "Error";
+        return `Error`;
     }
     const names = data
         .map((item) => `id: ${item.id}, name: ${item.name}`)
@@ -26,7 +29,15 @@ const routeAPINames = () => __awaiter(void 0, void 0, void 0, function* () {
     return names;
 });
 //Datos metereologicos
-const routeWeather = (query) => queryWeatherData(query);
+const routeWeather = (query) => {
+    const zipcode = query.zipcode;
+    if (zipcode.length === 5) {
+        return queryWeatherData(query);
+    }
+    else {
+        throw new Error("Error al ingresar el codigo postal proporcinado no tiene 5 digitos");
+    }
+};
 const queryWeatherData = (query) => {
     return {
         zipcode: query.zipcode,
@@ -36,7 +47,8 @@ const queryWeatherData = (query) => {
 };
 //Ejercicio1
 const Cities = [
-    { name: "Lima", population: 12000000 }
+    { name: "Lima", population: 12000000 },
+    { name: "Tokio", population: 34000000 }
 ];
 //exportacion nombrada
 export { routeHello, routeAPINames, routeWeather, Cities };

@@ -18,3 +18,14 @@ type CityType={
     name:string;
     population:number;
 };
+
+//Ejercicio2
+type ErrorResponse={
+    message:string;
+};
+
+//Ejercicio3
+
+type ValidationError={
+    message:string;
+}
