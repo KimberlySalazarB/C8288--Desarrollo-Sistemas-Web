@@ -41,6 +41,7 @@ Express.js:
  2. Archivo package.json:
 • Verifica que tu archivo package.json ahora incluya TypeScript y las definiciones de tipo de
 Express.js en las devDependencies:
+
 ```
  {
  "name": "sample-express",
@@ -64,6 +65,7 @@ configuración para que TypeScript transpile tu código correctamente:
 
 **npx tsc --init**
 
+```
  {
  "compilerOptions": {
  "esModuleInterop": true,
@@ -73,6 +75,7 @@ configuración para que TypeScript transpile tu código correctamente:
  "noImplicitAny": true
  }
  }
+```
 
 Para compilar tu proyecto TypeScript, ejecuta:
 **npx tsc**
