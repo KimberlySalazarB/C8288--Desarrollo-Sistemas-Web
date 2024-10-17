@@ -80,3 +80,5 @@ configuración para que TypeScript transpile tu código correctamente:
 Para compilar tu proyecto TypeScript, ejecuta:
 **npx tsc**
 Después de la transpilación: node (nombre del archivo .js)
+
+npx create-react-app myapp --template typescript
