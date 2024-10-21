@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es6",
+    "noImplicitAny": true
+ }                                 /* Skip type checking all .d.ts files. */
+  
+}
