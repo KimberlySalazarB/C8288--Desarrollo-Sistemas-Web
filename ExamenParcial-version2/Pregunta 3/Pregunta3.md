@@ -218,4 +218,4 @@ Se va ver un mensaje de exito de la eliminacion:
 
 Dando como resultado lo siguiente:
 
-![](imagenes/imagen3.3.1)
+![](imagenes/imagen3.3.1.PNG)
